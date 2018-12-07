@@ -7,6 +7,7 @@ public class Cat extends Animal{
     private boolean toksoplazmos;
     private boolean gender;
     private int weight;
+    private boolean sterilization;
 
     public Cat(boolean gender, int weight) {
         this.gender = gender;
@@ -36,9 +37,12 @@ public class Cat extends Animal{
         this.toksoplazmos = toksoplazmos;
     }
 
-    public Cat(int age, float pushistost, String name, String poroda, boolean toksoplazmos) {
+    public Cat(int age, float pushistost, String name, String poroda, boolean toksoplazmos, boolean gender, int weight, boolean sterilization) {
         super(age, pushistost, name, poroda);
         this.toksoplazmos = toksoplazmos;
+        this.gender = gender;
+        this.weight = weight;
+        this.sterilization = sterilization;
     }
 
     public boolean isGender() {
@@ -57,6 +61,14 @@ public class Cat extends Animal{
         this.weight = weight;
     }
 
+    public boolean isSterilization() {
+        return sterilization;
+    }
+
+    public void setSterilization(boolean sterilization) {
+        this.sterilization = sterilization;
+    }
+
 
 
     public void panicRun(){
@@ -67,6 +79,7 @@ public class Cat extends Animal{
 
     public void caterwaul() { System.out.println("мяу-мяу"); }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -75,10 +88,8 @@ public class Cat extends Animal{
         Cat cat = (Cat) o;
         return toksoplazmos == cat.toksoplazmos &&
                 gender == cat.gender &&
-                weight == cat.weight;
+                weight == cat.weight &&
+                sterilization == cat.sterilization;
     }
-
-
-
 
 }
