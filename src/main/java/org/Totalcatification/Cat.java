@@ -8,6 +8,7 @@ public class Cat extends Animal{
     private boolean gender;
     private     int weight;
     private boolean sterilization;
+    private boolean determination;
 
     public Cat(boolean gender, int weight) {
         this.gender = gender;
