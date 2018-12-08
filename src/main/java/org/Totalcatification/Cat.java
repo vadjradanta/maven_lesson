@@ -6,7 +6,7 @@ public class Cat extends Animal{
 
     private boolean toksoplazmos;
     private boolean gender;
-    private int weight;
+    private     int weight;
     private boolean sterilization;
 
     public Cat(boolean gender, int weight) {
@@ -71,6 +71,16 @@ public class Cat extends Animal{
     }
 
     public boolean isSterilization() {
+
+        boolean sterialized   = false;
+        boolean unsterialized = false;
+
+        if (sterilization){
+            sterilization = sterialized;
+        }else{
+            sterilization = unsterialized;
+        }
+
         return sterilization;
     }
 
@@ -101,4 +111,16 @@ public class Cat extends Animal{
                 sterilization == cat.sterilization;
     }
 
+    public boolean isDetermination(){
+
+        boolean state   = false;
+        boolean unstate = false;
+
+            if (determination){
+                determination = state;
+            }else{
+                determination = unstate;
+            }
+            return determination;
+    }
 }
