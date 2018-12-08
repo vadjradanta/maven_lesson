@@ -20,6 +20,7 @@ public class Cat extends Animal{
 
     public void setToksoplazmos(boolean toksoplazmos, boolean gender) {
         this.toksoplazmos = toksoplazmos;
+        this.gender       = gender;
 
     }
 
@@ -39,13 +40,21 @@ public class Cat extends Animal{
 
     public Cat(int age, float pushistost, String name, String poroda, boolean toksoplazmos, boolean gender, int weight, boolean sterilization) {
         super(age, pushistost, name, poroda);
-        this.toksoplazmos = toksoplazmos;
-        this.gender = gender;
-        this.weight = weight;
+        this.toksoplazmos  = toksoplazmos;
+        this.gender        = gender;
+        this.weight        = weight;
         this.sterilization = sterilization;
     }
 
     public boolean isGender() {
+        boolean male   = false;
+        boolean female = false;
+        if (gender){
+            gender = male;
+        } else {
+            gender = female;
+        }
+
         return gender;
     }
 
@@ -86,9 +95,9 @@ public class Cat extends Animal{
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Cat cat = (Cat) o;
-        return toksoplazmos == cat.toksoplazmos &&
-                gender == cat.gender &&
-                weight == cat.weight &&
+        return toksoplazmos   == cat.toksoplazmos &&
+                gender        == cat.gender &&
+                weight        == cat.weight &&
                 sterilization == cat.sterilization;
     }
 
