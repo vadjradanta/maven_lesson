@@ -71,15 +71,22 @@ public class CatAplication {
 //        if (cat.equals(obj)) System.out.println("Равны");
 //        else System.out.println("Не очень равны");
 
-        Cat cat = new Cat(false, 5);
-        Animal dog = new Dog(5, 0.1F, "Тузик", "Той терьер");
-        cat.caterwaul();
-        cat.eat("Педигри");
+        Cat cat5 = new Cat(2, 0.5F, "Васька", "Норвежская лесная", true, true, 7, false);
 
-        dog.eat("Китикэт");
-        ((Dog) dog).bark();
+        Cat cat6 = new Cat(true, 3);
 
-        cat.fuff();
+        System.out.println(cat5);
+
+
+//        Cat cat = new Cat(false, 5);
+//        Animal dog = new Dog(5, 0.1F, "Тузик", "Той терьер");
+//        cat.caterwaul();
+//        cat.eat("Педигри");
+//
+//        dog.eat("Китикэт");
+//        ((Dog) dog).bark();
+//
+//        cat.fuff();
 
 
 
