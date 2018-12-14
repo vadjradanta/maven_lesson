@@ -16,10 +16,6 @@ public class Developer extends Employee{
     }
 
 
-
-
-
-
     @Override
     public void work() {
         writeCode();
@@ -38,7 +34,11 @@ public class Developer extends Employee{
     }
 
     private void writeCode(){
-        System.out.println("Пишу код...");
+        String techs = "";
+        for (String skill : programmingSkillSet) {
+            techs = techs + ", " +skill;
+        }
+        System.out.println("Пишу код... Использую " + techs);
     }
 
 

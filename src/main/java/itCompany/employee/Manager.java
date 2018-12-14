@@ -28,19 +28,22 @@ public class Manager extends Employee {
             System.out.println("исследую рынок");
         }
         if (teamManaging){
-            System.out.println("Настоящие герои всегда идут в обход!..");
+            System.out.println("управляю командой..");
         }
 
     }
 
     public void lounchMeeting() {
-        System.out.println("Всем стоять, бояться!");
+        System.out.println("митингую");
     }
 
 
 
     @Override
     public void work() {
+        manage();
+        lounchMeeting();
+        manage();
 
     }
 
