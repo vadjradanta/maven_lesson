@@ -1,17 +1,17 @@
 package itCompany.employee;
 
-public class Developer extends Employee{
+public class Developer extends Employee {
     private String[] programmingSkillSet;
-    private String   preferedOS;
+    private String preferedOS;
 
-    public Developer(){
+    public Developer() {
 
     }
 
-    public Developer(String firstName, String lastName, int age, int salary, String[] programmingSkillSet, String preferedOS){
+    public Developer(String firstName, String lastName, int age, int salary, String[] programmingSkillSet, String preferedOS) {
         super(firstName, lastName, age, salary);
         this.programmingSkillSet = programmingSkillSet;
-        this.preferedOS          = preferedOS;
+        this.preferedOS = preferedOS;
 
     }
 
@@ -25,7 +25,7 @@ public class Developer extends Employee{
 
     }
 
-    public void drinkCoffe(){
+    public void drinkCoffe() {
         System.out.println("Пью кофе");
     }
 
@@ -33,14 +33,13 @@ public class Developer extends Employee{
         System.out.println("Ем печеньки...");
     }
 
-    private void writeCode(){
+    private void writeCode() {
         String techs = "";
         for (String skill : programmingSkillSet) {
-            techs = techs + ", " +skill;
+            techs = techs + ", " + skill;
         }
         System.out.println("Пишу код... Использую " + techs);
     }
-
 
 
     public String[] getProgrammingSkillSet() {
@@ -60,11 +59,11 @@ public class Developer extends Employee{
     }
 }
 
-    class Test {
-        public static void main(String[] args) {
-            Developer developer = new Developer();
-            developer.work();
-        }
+class Test {
+    public static void main(String[] args) {
+        Developer developer = new Developer();
+        developer.work();
     }
+}
 
 
