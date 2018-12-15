@@ -2,7 +2,6 @@ package itCompany;
 
 import itCompany.employee.*;
 
-import javax.swing.*;
 
 public class MainItComp {
     public static void main(String[] args) {
@@ -15,28 +14,27 @@ public class MainItComp {
 
                 new Desigener("John", "Smith", 29, 6000,
                         new String[]{"Mobile Design", "Photoshop", "Sketch"}, "Macbook Pro Over 9000"),
-                new Cleaner("Elizabeth", "Taylor", 21, 8000, true, new String[]{"mop", "brush", "scoop"})
+                new Cleaner("Elizabeth", "Taylor", 21, 8000, true, true, new String[]{"mop", "brush", "scoop"})
 
         };
 
-        for (Employee employee : employees){
+        for (Employee employee : employees) {
             employee.work();
 
-            if(employee instanceof Developer) {
+            if (employee instanceof Developer) {
                 System.out.println("Я - " + Developer.class.getSimpleName());
-                ((Developer)employee).drinkCoffe();
+                ((Developer) employee).drinkCoffe();
             }
 
             if (employee instanceof Manager) {
                 System.out.println("Я - " + Manager.class.getSimpleName());
-                ((Manager)employee).lounchMeeting();
+                ((Manager) employee).lounchMeeting();
             }
 
             if (employee instanceof Desigener) {
                 System.out.println("Я - " + Desigener.class.getSimpleName());
-                ((Desigener)employee).showSketches();
+                ((Desigener) employee).showSketches();
             }
-
 
 
             System.out.println();

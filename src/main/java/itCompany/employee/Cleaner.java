@@ -2,20 +2,20 @@ package itCompany.employee;
 
 public class Cleaner extends Employee {
     private boolean cleaningOffice;
-    private String grumble;
+    private boolean grumble;
     private String[] equipment;
 
 
     public Cleaner() {
     }
 
-    public Cleaner(boolean cleaningOffice, String grumble, String[] equipment) {
+    public Cleaner(boolean cleaningOffice, boolean grumble, String[] equipment) {
         this.cleaningOffice = cleaningOffice;
         this.grumble = grumble;
         this.equipment = equipment;
     }
 
-    public Cleaner(String firstName, String lastName, int age, int salary, boolean cleaningOffice, String grumble, String[] equipment) {
+    public Cleaner(String firstName, String lastName, int age, int salary, boolean cleaningOffice, boolean grumble, String[] equipment) {
         super(firstName, lastName, age, salary);
         this.cleaningOffice = cleaningOffice;
         this.grumble = grumble;
@@ -48,11 +48,11 @@ public class Cleaner extends Employee {
         this.cleaningOffice = cleaningOffice;
     }
 
-    public String getGrumble(String grumble){
+    public boolean isGrumble(boolean grumble){
         return grumble;
     }
 
-    public void setGrumble(String grumble){
+    public void setGrumble(boolean grumble){
         this.grumble = grumble;
     }
 
