@@ -14,13 +14,13 @@ public class Manager extends Employee {
 
     public Manager(boolean researchingMarket, boolean teamManaging) {
         this.researchingMarket = researchingMarket;
-        this.teamManaging = teamManaging;
+        this.teamManaging      = teamManaging;
     }
 
     public Manager(String firstName, String lastName, int age, int salary, boolean researchingMarket, boolean teamManaging) {
         super(firstName, lastName, age, salary);
         this.researchingMarket = researchingMarket;
-        this.teamManaging = teamManaging;
+        this.teamManaging      = teamManaging;
     }
 
     private void manage(){

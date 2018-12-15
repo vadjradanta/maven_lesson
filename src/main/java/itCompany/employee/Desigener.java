@@ -10,13 +10,13 @@ public class Desigener extends Employee {
 
     public Desigener(String[] desigenerSkillSet, String computer) {
         this.desigenerSkillSet = desigenerSkillSet;
-        this.computer = computer;
+        this.computer          = computer;
     }
 
     public Desigener(String firstName, String lastName, int age, int salary, String[] desigenerSkillSet, String computer) {
         super(firstName, lastName, age, salary);
         this.desigenerSkillSet = desigenerSkillSet;
-        this.computer = computer;
+        this.computer          = computer;
     }
 
     public String[] getDesigenerSkillSet() {

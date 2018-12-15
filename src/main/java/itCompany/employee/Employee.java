@@ -3,17 +3,17 @@ package itCompany.employee;
 public abstract class Employee {
     private String FirstName;
     private String LastName;
-    private int age;
-    private int salary;
-    private float vacation;
+    private int    age;
+    private int    salary;
+    private float  vacation;
 
     protected Employee() {
     }
 
     Employee(String firstName, String lastName, int age, int salary) {
-        FirstName = firstName;
-        LastName = lastName;
-        this.age = age;
+        FirstName   = firstName;
+        LastName    = lastName;
+        this.age    = age;
         this.salary = salary;
 
     }
