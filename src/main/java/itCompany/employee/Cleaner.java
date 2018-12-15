@@ -1,21 +1,25 @@
 package itCompany.employee;
 
 public class Cleaner extends Employee {
-    private boolean   cleaningOffice;
+    private boolean cleaningOffice;
+    private String grumble;
     private String[] equipment;
+
 
     public Cleaner() {
     }
 
-    public Cleaner(boolean cleaningOffice, String[] equipment) {
+    public Cleaner(boolean cleaningOffice, String grumble, String[] equipment) {
         this.cleaningOffice = cleaningOffice;
-        this.equipment      = equipment;
+        this.grumble = grumble;
+        this.equipment = equipment;
     }
 
-    public Cleaner(String firstName, String lastName, int age, int salary, boolean cleaningOffice, String[] equipment) {
+    public Cleaner(String firstName, String lastName, int age, int salary, boolean cleaningOffice, String grumble, String[] equipment) {
         super(firstName, lastName, age, salary);
         this.cleaningOffice = cleaningOffice;
-        this.equipment      = equipment;
+        this.grumble = grumble;
+        this.equipment = equipment;
     }
 
     @Override
@@ -38,12 +42,18 @@ public class Cleaner extends Employee {
         System.out.println("Моешь, тут моешь, а они опять с грязными лапами припёрлись!");
     }
 
-    public boolean getCleaningOffice() {
-        return cleaningOffice;
-    }
+    public boolean isCleaningOffice() { return cleaningOffice; }
 
     public void setCleaningOffice(boolean cleaningOffice) {
         this.cleaningOffice = cleaningOffice;
+    }
+
+    public String getGrumble(String grumble){
+        return grumble;
+    }
+
+    public void setGrumble(String grumble){
+        this.grumble = grumble;
     }
 
     public String[] getEquipment() {
