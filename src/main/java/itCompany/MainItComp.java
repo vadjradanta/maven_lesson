@@ -42,7 +42,7 @@ public class MainItComp {
                         true, true, "brush"),
                 new Cleaner("Tomas", "Hardy", 27, 5000,
                         true, false, "mop"),
-                new Cleaner ("John", "Carmac", 33, 11111,
+                new Cleaner("John", "Carmac", 33, 11111,
                         false, true, "scoop"),
                 new Cleaner("Tim", "Roth", 28, 9797,
                         false, true, "lash"),
