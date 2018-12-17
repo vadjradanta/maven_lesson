@@ -59,4 +59,15 @@ public abstract class Employee {
     public void setVacation(float vacation) {
         this.vacation = vacation;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "FirstName='" + FirstName + '\'' +
+                ", LastName='" + LastName + '\'' +
+                ", age=" + age +
+                ", salary=" + salary +
+                ", vacation=" + vacation +
+                '}';
+    }
 }

@@ -3,6 +3,7 @@ package itCompany;
 import itCompany.employee.*;
 
 
+
 public class MainItComp {
     public static void main(String[] args) {
         Employee[] employees = new Employee[]{
@@ -50,6 +51,31 @@ public class MainItComp {
                         false, true, "skate"),
 
         };
+
+//        System.out.println(employees[0].getFirstName() + " Зарплата = " + employees[0].getSalary() + ", лет = " + employees[0].getAge());
+
+
+        /**
+         * 1. Посчитать среднее значение по зарплатам всех сотрудников
+         */
+
+        float averageSalary = EmployeeUtil.getEmployeesAverageSalary(employees);
+        System.out.println("Средняя зарплата в компании = " + averageSalary);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         for (Employee employee : employees) {
             employee.work();
