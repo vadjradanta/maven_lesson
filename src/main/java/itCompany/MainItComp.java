@@ -6,15 +6,48 @@ import itCompany.employee.*;
 public class MainItComp {
     public static void main(String[] args) {
         Employee[] employees = new Employee[]{
-                new Developer("John", "Smith", 29, 6000,
-                        new String[]{"JAVA", "Git", "Maven"}, "MacOS"),
+                new Developer("John", "Smith", 29, 12000,
+                        null, "MacOS"),
+                new Developer("Frank", "Grow", 21, 8000,
+                        null, "Windows"),
+                new Developer("Lilian", "Fellow", 22, 7800,
+                        null, "Ubuntu"),
+                new Developer("Mira", "Gilton", 24, 5400,
+                        null, "MacOS"),
+                new Developer("Rose", "Giply", 34, 9300,
+                        null, "MacOS"),
 
-                new Manager("John", "Smith", 29, 6000,
-                        true, false),
+                new Manager("John", "Smith", 39, 11300,
+                        false, true),
+                new Manager("Kira", "Snow", 29, 12290,
+                        false, true),
+                new Manager("John", "Dorian", 32, 16900,
+                        false, true),
+                new Manager("Gregory", "Nortan", 19, 6400,
+                        false, true),
 
-                new Desigener("John", "Smith", 29, 6000,
-                        new String[]{"Mobile Design", "Photoshop", "Sketch"}, "Macbook Pro Over 9000"),
-                new Cleaner("Elizabeth", "Taylor", 21, 8000, true, true, new String[]{"mop", "brush", "scoop"})
+
+                new Desigener("John", "Smith", 27, 7400,
+                        null, "mac"),
+                new Desigener("lara", "Croft", 20, 3200,
+                        null, "mac"),
+                new Desigener("Jason", "Born", 35, 12670,
+                        null, "mac"),
+                new Desigener("Silvia", "Jeremy", 28, 5350,
+                        null, "mac"),
+                new Desigener("Natan", "Crow", 26, 7165,
+                        null, "mac"),
+
+                new Cleaner("Elizabeth", "Taylor", 21, 8000,
+                        true, true, "brush"),
+                new Cleaner("Tomas", "Hardy", 27, 5000,
+                        true, false, "mop"),
+                new Cleaner ("John", "Carmac", 33, 11111,
+                        false, true, "scoop"),
+                new Cleaner("Tim", "Roth", 28, 9797,
+                        false, true, "lash"),
+                new Cleaner("John", "Snow", 31, 3131,
+                        false, true, "skate"),
 
         };
 
