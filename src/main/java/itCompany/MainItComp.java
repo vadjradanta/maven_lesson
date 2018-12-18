@@ -59,8 +59,23 @@ public class MainItComp {
          * 1. Посчитать среднее значение по зарплатам всех сотрудников
          */
 
-        float averageSalary = EmployeeUtil.getEmployeesAverageSalary(employees);
-        System.out.println("Средняя зарплата в компании = " + averageSalary);
+//        float averageSalary = EmployeeUtil.getEmployeesAverageSalary(employees);
+//        System.out.println("Средняя зарплата в компании = " + averageSalary);
+
+
+        /**
+         * Посчитать среднее зарплаты сотрудников сарше 25 лет
+         */
+
+        Employee[] employeesOlderThan25 = EmployeeUtil.getEmployeesOlderThan(employees, 30);
+        EmployeeUtil.printEmployees(employeesOlderThan25);
+        float averageSalary = EmployeeUtil.getEmployeesAverageSalary(employeesOlderThan25);
+        System.out.println("Средняя зарплата сотрудников старше = " + averageSalary);
+
+
+        /**
+         * Посчитать отдельно з/п по категориям сотрудников - разрабы/менеджеры/дизайнеры
+         */
 
 
 

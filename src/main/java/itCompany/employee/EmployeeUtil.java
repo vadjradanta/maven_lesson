@@ -21,9 +21,22 @@ public class EmployeeUtil {
      * @return среднее значение
      */
 
-    public static float getEmloyeesAverageSalary(Employee[] employees, Class clazz){
-        //TODO implement
-        return 0f;
+    public static Employee[] getConcreteEmployees(Employee[] employees, Class clazz) {
+        int counter = 0;
+        for (Employee employee : employees) {
+            if (employee.getClass() == clazz) {
+                counter++;
+            }
+        }
+
+        Employee[] newEmployees = new Employee[counter];
+        int i = 0;
+        for (Employee employee : employees) {
+            if (employee.getClass() == clazz) {
+                newEmployees[i++] = employee;
+            }
+        }
+        return newEmployees;
     }
 
     /**
@@ -31,7 +44,7 @@ public class EmployeeUtil {
      * @param age возраст
      * @return новый массив из сотрудников соответствующих критерию
      */
-    public static Employee[] getEmployeeOlderThan(Employee[] employees, int age){
+    public static Employee[] getEmployeesOlderThan(Employee[] employees, int age){
         int counter = 0;
         for (Employee employee : employees) {
             if (employee.getAge() > age) {
