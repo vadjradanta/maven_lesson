@@ -44,7 +44,7 @@ public class EmployeeUtil {
      * @param age возраст
      * @return новый массив из сотрудников соответствующих критерию
      */
-    public static Employee[] getEmployeesOlderThan(Employee[] employees, int age){
+    public static Employee[] getEmployeesOlderThan(Employee[] employees, int age) {
         int counter = 0;
         for (Employee employee : employees) {
             if (employee.getAge() > age) {
@@ -55,12 +55,38 @@ public class EmployeeUtil {
             Employee[] newEmployees = new Employee[counter];
             int i = 0;
             for (Employee employee : employees) {
-                if (employee.getAge() > age){
+                if (employee.getAge() > age) {
                     newEmployees[i++] = employee;
                 }
             }
             return newEmployees;
     }
+
+
+    /**
+     * Получаем сотрудников младше заданного возраста
+     * @param employees массив сотрудников
+     * @param age ограничение по возрасту
+     * @return массив сотрудников
+     */
+    public static Employee[] getEmployeeaYongerThan(Employee[] employees, int age) {
+        int counter = 0;
+        for (Employee employee : employees){
+            if (employee.getAge() < age){
+                counter++;
+            }
+        }
+
+        Employee[] newEmployees = new Employee[counter];
+             int i = 0;
+             for (Employee employee : employees) {
+                 if (employee.getAge() < age) {
+                    newEmployees[i++] = employee;
+                 }
+            }
+            return newEmployees;
+    }
+
 
     public static void printEmployees(Employee[] employees) {
         for (Employee employee : employees) {
