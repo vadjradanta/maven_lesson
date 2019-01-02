@@ -27,7 +27,6 @@ public class MainItComp {
                 new Manager("Gregory", "Nortan", 19, 6400,
                         false, true),
 
-
                 new Desigener("John", "Smith", 27, 7400,
                         null, "mac"),
                 new Desigener("lara", "Croft", 20, 3200,
@@ -67,15 +66,27 @@ public class MainItComp {
          * Посчитать среднее зарплаты сотрудников сарше 25 лет
          */
 
-        Employee[] employeesOlderThan25 = EmployeeUtil.getEmployeesOlderThan(employees, 30);
-        EmployeeUtil.printEmployees(employeesOlderThan25);
-        float averageSalary = EmployeeUtil.getEmployeesAverageSalary(employeesOlderThan25);
-        System.out.println("Средняя зарплата сотрудников старше = " + averageSalary);
+//        Employee[] employeesOlderThan25 = EmployeeUtil.getEmployeesOlderThan(employees, 30);
+//        EmployeeUtil.printEmployees(employeesOlderThan25);
+//        float averageSalary = EmployeeUtil.getEmployeesAverageSalary(employeesOlderThan25);
+//        System.out.println("Средняя зарплата сотрудников старше = " + averageSalary);
 
 
         /**
          * Посчитать отдельно з/п по категориям сотрудников - разрабы/менеджеры/дизайнеры
          */
+        Employee[] concreateEmployees = EmployeeUtil.getConcreteEmployees(employees, Developer.class);
+        Employee[] concreateEmployees1 = EmployeeUtil.getConcreteEmployees(employees, Manager.class);
+        Employee[] concreateEmployees2 = EmployeeUtil.getConcreteEmployees(employees, Desigener.class);
+        Employee[] concreateEmployees3 = EmployeeUtil.getConcreteEmployees(employees, Cleaner.class);
+
+
+
+
+        System.out.println("Средняя зарплата Developer = " + EmployeeUtil.getEmployeesAverageSalary(concreateEmployees));
+        System.out.println("Средняя зарплата Manager = " + EmployeeUtil.getEmployeesAverageSalary(concreateEmployees1));
+        System.out.println("Средняя зарплата Desigener = " + EmployeeUtil.getEmployeesAverageSalary(concreateEmployees2));
+        System.out.println("Средняя зарплата Cleaner = " + EmployeeUtil.getEmployeesAverageSalary(concreateEmployees3));
 
 
 
@@ -92,27 +103,31 @@ public class MainItComp {
 
 
 
-        for (Employee employee : employees) {
-            employee.work();
-
-            if (employee instanceof Developer) {
-                System.out.println("Я - " + Developer.class.getSimpleName());
-                ((Developer) employee).drinkCoffe();
-            }
-
-            if (employee instanceof Manager) {
-                System.out.println("Я - " + Manager.class.getSimpleName());
-                ((Manager) employee).lounchMeeting();
-            }
-
-            if (employee instanceof Desigener) {
-                System.out.println("Я - " + Desigener.class.getSimpleName());
-                ((Desigener) employee).showSketches();
-            }
 
 
-            System.out.println();
-        }
+//
+//
+//        for (Employee employee : employees) {
+//            employee.work();
+//
+//            if (employee instanceof Developer) {
+//                System.out.println("Я - " + Developer.class.getSimpleName());
+//                ((Developer) employee).drinkCoffe();
+//            }
+//
+//            if (employee instanceof Manager) {
+//                System.out.println("Я - " + Manager.class.getSimpleName());
+//                ((Manager) employee).lounchMeeting();
+//            }
+//
+//            if (employee instanceof Desigener) {
+//                System.out.println("Я - " + Desigener.class.getSimpleName());
+//                ((Desigener) employee).showSketches();
+//            }
+//
+//
+//            System.out.println();
+//        }
 
     }
 }
