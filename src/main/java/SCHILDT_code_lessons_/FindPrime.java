@@ -7,7 +7,7 @@ public class FindPrime {
         int num;
         boolean isPrime;
 
-        num = 1;
+        num = 14;
 
         if (num < 2) isPrime = false;
         else isPrime = true;
