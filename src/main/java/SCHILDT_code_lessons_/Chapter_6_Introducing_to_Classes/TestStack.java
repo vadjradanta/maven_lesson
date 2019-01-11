@@ -10,7 +10,7 @@ class TestStack {
 
         //разместить числа в стеке
         for (int i = 0; i < 10; i++) mystack1.push(i);
-        for (int i = 0; i < 20; i++) mystack2.push(i);
+        for (int i = 10; i < 20; i++) mystack2.push(i);
 
         //извлечь эти числа из стека
         System.out.println("Содержимое стека mystack1:");
